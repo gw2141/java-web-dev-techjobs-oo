@@ -1,8 +1,8 @@
-package org.launchcode.techjobs_oo.Tests;
+package org.launchcode.techjobs_oo.test;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.launchcode.techjobs_oo.*;
-public class JobTest {
+public class JobTests {
     @Test
     public void testSettingJobId(){
         Job jobId = new Job();
