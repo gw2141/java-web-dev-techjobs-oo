@@ -1,5 +1,7 @@
 package org.launchcode.techjobs_oo;
 
+import java.util.Objects;
+
 public class Job {
 
     private int id;
@@ -23,9 +25,9 @@ public class Job {
         this.name = name;
         this.employer = employer;
         this.location = location;
-        this.positionType  = positionType;
+        this.positionType = positionType;
         this.coreCompetency = coreCompetency;
-
+    }
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
         @Override
@@ -33,12 +35,8 @@ public class Job {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
             Job job = (Job) o;
-            return id == job.id &&
-                    Objects.equals(name, job.name) &&
-                    Objects.equals(employer, job.employer) &&
-                    Objects.equals(location, job.location) &&
-                    Objects.equals(positionType, job.positionType) &&
-                    Objects.equals(coreCompetency, job.coreCompetency);
+            return id == job.id;
+
         }
         @Override
         public String toString() {
@@ -68,7 +66,7 @@ public class Job {
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
-}
+
     public int getId() {
         return id;
     }
